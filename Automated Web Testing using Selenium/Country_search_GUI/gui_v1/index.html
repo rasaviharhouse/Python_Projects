@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Search App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- Home Page -->
+        <div id="homePage">
+
+            <h2>Country App</h2>
+            <img src="world.jpeg">
+            <br>
+
+            <h2>Current country:</h2>
+            <form>
+                <label for="cname">Country name:</label>
+                <input type="text" id="cname" name="cname"><br>
+            </form>
+
+            <h2>Age:</h2>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="ageSlider">
+                <p>Age: <span id="age"></span></p>
+            </div>
+
+            <h2>Favorite country:</h2>
+            <form>
+                <input type="radio" id="usa" name="fav_country" value="USA">
+                <label for="usa">USA</label><br>
+                <input type="radio" id="india" name="fav_country" value="India">
+                <label for="india">India</label><br>
+                <input type="radio" id="other" name="fav_country" value="other">
+                <label for="other">other</label><br>
+                <br>
+            </form>
+
+            <button onclick="navigateToSearch()">Go to Country Search</button>
+
+        </div>
+
+        <!-- Country Search Page -->
+        <div id="searchPage" style="display: none;">
+            <h2>Country Search Page</h2>
+            <img src="countries.jpeg">
+            <br>
+
+            <h2>Enter your name:</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+            </form>
+
+            <p>Countries available:</p>
+            <ol>
+                <li>India</li>
+                <li>United States of America</li>
+            </ol>
+
+            <h3>Select country:</h3>
+
+            <select class="form-select" id="country" name="country">
+                <option>select country</option>
+                <option value="IN">India</option>
+                <option value="US">United States</option>
+            </select>
+
+            <hr>
+            <button onclick="navigateToHome()">Back</button>
+            <span style="display:inline-block; width: 25;"></span>
+            <button onclick="searchCountry()">Search</button>
+
+
+        </div>
+
+        <!-- Details Page -->
+        <div id="detailsPage" style="display: none;">
+            <h2>Country Details Page</h2>
+            <div id="countryDetails" class="details"></div>
+
+            <h2>Residence country:</h2>
+            <form>
+                <label for="rcname">Residence Country name:</label>
+                <input type="text" id="rcname" name="rcname"><br><br>
+            </form>
+
+            <button onclick="navigateToHome()">Go to Home</button>
+            <span style="display:inline-block; width: 25;"></span>
+            <button onclick="navigateToSearch()">Go to Country Search</button>
+
+            <h2>Rate this website:</h2>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="5" value="3" class="slider" id="ratingSlider">
+                <p>Rating: <span id="rating"></span></p>
+            </div>
+
+            <h2>Do you like this website?</h2>
+            <form>
+                <input type="radio" id="feedback_yes" name="feedback" value="Yes">
+                <label for="feedback_yes">Yes</label><br>
+                <input type="radio" id="feedback_no" name="feedback" value="No">
+                <label for="feedback_no">No</label><br>
+                <br>
+            </form>
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

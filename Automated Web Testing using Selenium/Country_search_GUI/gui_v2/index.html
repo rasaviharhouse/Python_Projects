@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Search App</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<div id="container" class="text-white">
+
+    <!-- Country Search Page -->
+    <div id="searchPage">
+
+        <h2>Country Search Page</h2>
+        <div class="row">
+            <div class="col-sm">
+                <img src="/countries.jpeg">
+            </div>
+            <div class="col-sm">
+                <h2>Enter your name:</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br>
+                </form>
+
+                <p>Countries available:</p>
+                <ol>
+                    <li>India</li>
+                    <li>United States of America</li>
+                </ol>
+
+                <h3>Select country:</h3>
+
+                <select class="form-select" id="country" name="country">
+                    <option>select country</option>
+                    <option value="IN">India</option>
+                    <option value="US">United States</option>
+                </select>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm col-12 align-content-end">
+                <button onclick="searchCountry()">Search</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Details Page -->
+    <div id="detailsPage" style="display: none;">
+
+        <h2>Country Details Page</h2>
+
+        <div id="countryDetails" class="details"></div>
+        <div class="row">
+            <div class="col-sm">
+                <h2>Residence country:</h2>
+                <form>
+                    <label for="rcname">Residence Country name:</label>
+                    <input type="text" id="rcname" name="rcname"><br><br>
+                </form>
+            </div>
+
+
+            <div class="col-sm">
+                <h2>Rate this website:</h2>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="5" value="3" class="slider" id="ratingSlider">
+                    <p>Rating: <span id="rating"></span></p>
+                </div>
+            </div>
+            <div class="col-sm">
+                <h2>Do you like this website?</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-sm">
+                            <input type="radio" id="feedback_yes" name="feedback" value="Yes">
+                            <label for="feedback_yes">Yes</label><br>
+                        </div>
+                        <div class="col-sm">
+                            <input type="radio" id="feedback_no" name="feedback" value="No">
+                            <label for="feedback_no">No</label><br>
+                            <br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <button onclick="navigateToSearch()">Back</button>
+            </div>
+            <div class="col-sm">
+                <button onclick="navigateToHome()">Next</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Home Page -->
+    <div id="homePage" style="display: none;">
+
+
+        <h2>Country App</h2>
+        <div class="row">
+            <div class="col-sm">
+                <img src="/world.jpeg">
+            </div>
+            <div class="col-sm">
+                <h2>Current country:</h2>
+                <form>
+                    <label for="cname">Country name:</label>
+                    <input type="text" id="cname" name="cname"><br>
+                </form>
+
+                <h2>Age:</h2>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="ageSlider">
+                    <p>Age: <span id="age"></span></p>
+                </div>
+
+                <h2>Favorite country:</h2>
+                <form>
+                    <input type="radio" id="usa" name="fav_country" value="USA">
+                    <label for="usa">USA</label><br>
+                    <input type="radio" id="india" name="fav_country" value="India">
+                    <label for="india">India</label><br>
+                    <input type="radio" id="other" name="fav_country" value="other">
+                    <label for="other">other</label><br>
+                    <br>
+                </form>
+
+                <div class="row">
+                    <div class="col-sm">
+                        <button onclick="navigateToSearch()">Home</button>
+                    </div>
+                    <div class="col-sm">
+                        <button onclick="navigateToSearchResults()">Back</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
